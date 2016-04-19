@@ -18,7 +18,11 @@ new_post <- function(title, date, name, blogdir = ".") {
         ensure_posts(blogdir)
         dir.create(pd)
     }
-    content <- paste("#", title)
+    content <- c(
+        paste("#", title),
+        "",
+        paste0("*", format(date, "%B %d, %Y"), "*")
+    )
     write(content, paste(pd, "content.Rmd", sep = "/"))
     ensure_shell(blogdir)
     shell_in <- paste(blogdir, "shell.Rmd", sep = "/")
