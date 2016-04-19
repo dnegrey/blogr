@@ -11,17 +11,17 @@
 #' new_post("Hello, world!", Sys.Date(), "hello-world")
 #' @export 
 new_post <- function(title, date, name, blogdir = ".") {
-    post_dir <- paste(blogdir, "posts", paste(date, name, sep = "-"), sep = "/")
-    if (dir.exists(post_dir)) {
-        stop("the post [", post_dir, "] already exists")
+    pd <- post_dir(date, name, blogdir)
+    if (dir.exists(pd)) {
+        stop("the post [", pd, "] already exists")
     } else {
         ensure_posts(blogdir)
-        dir.create(post_dir)
+        dir.create(pd)
     }
     content <- paste("#", title)
-    write(content, paste(post_dir, "content.Rmd", sep = "/"))
+    write(content, paste(pd, "content.Rmd", sep = "/"))
     ensure_shell(blogdir)
     shell_in <- paste(blogdir, "shell.Rmd", sep = "/")
-    shell_out <- paste(post_dir, "index.Rmd", sep = "/")
+    shell_out <- paste(pd, "index.Rmd", sep = "/")
     file.copy(shell_in, shell_out)
 }

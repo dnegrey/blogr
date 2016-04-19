@@ -3,3 +3,4 @@
 export(ensure_posts)
 export(ensure_shell)
 export(new_post)
+export(post_dir)
