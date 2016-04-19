@@ -6,7 +6,7 @@
 #' @param blogdir path to the base directory of the blog
 #' @return A new post is created in the \code{posts} directory using the 
 #' \code{title}, \code{date} and \code{name} that were supplied.
-#' @seealso \code{\link{ensure_posts}}
+#' @seealso \code{\link{tag_post}, \link{render_post}, \link{remove_post}}
 #' @examples 
 #' new_post("Hello, world!", Sys.Date(), "hello-world")
 #' @export 

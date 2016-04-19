@@ -25,6 +25,6 @@ new_post("Hello, world!", Sys.Date(), "hello-world")
 tag_post(post_dir(Sys.Date(), "hello-world"), c("greetings", "salutations"))
 }
 \seealso{
-\code{\link{new_post}}
+\code{\link{new_post}, \link{render_post}, \link{remove_post}}
 }
 

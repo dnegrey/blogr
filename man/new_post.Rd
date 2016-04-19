@@ -26,6 +26,6 @@ A new post is created in the \code{posts} directory using the
 new_post("Hello, world!", Sys.Date(), "hello-world")
 }
 \seealso{
-\code{\link{ensure_posts}}
+\code{\link{tag_post}, \link{render_post}, \link{remove_post}}
 }
 

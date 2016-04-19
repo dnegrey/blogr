@@ -5,7 +5,7 @@
 #' @param append logical value; add to existing tags (or replace)?
 #' @return The \code{tags} file in the directory \code{post} is created if it 
 #' does not already exist, and populated with the items in \code{tags}.
-#' @seealso \code{\link{new_post}}
+#' @seealso \code{\link{new_post}, \link{render_post}, \link{remove_post}}
 #' @examples 
 #' new_post("Hello, world!", Sys.Date(), "hello-world")
 #' tag_post(post_dir(Sys.Date(), "hello-world"), c("greetings", "salutations"))

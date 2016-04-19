@@ -2,7 +2,7 @@
 #' @description \code{remove_post} removes a post
 #' @param post path to the post
 #' @return The directory \code{post} is removed if it exists.
-#' @seealso \code{\link{new_post}}
+#' @seealso \code{\link{new_post}, \link{tag_post}, \link{render_post}}
 #' @examples 
 #' new_post("Hello, world!", Sys.Date(), "hello-world")
 #' remove_post(post_dir(Sys.Date(), "hello-world"))

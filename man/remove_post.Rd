@@ -20,6 +20,6 @@ new_post("Hello, world!", Sys.Date(), "hello-world")
 remove_post(post_dir(Sys.Date(), "hello-world"))
 }
 \seealso{
-\code{\link{new_post}}
+\code{\link{new_post}, \link{tag_post}, \link{render_post}}
 }
 
