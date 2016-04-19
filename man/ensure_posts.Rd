@@ -20,4 +20,7 @@ directory
 \examples{
 ensure_posts()
 }
+\seealso{
+\code{\link{new_post}}
+}
 
