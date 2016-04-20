@@ -1,7 +1,7 @@
 Package: blogr
 Type: Package
 Version: 0.0.0.9002
-Title: Create a blog using R markdown
+Title: Lightweight blog framework using R markdown
 Description: Basic utilities for creating a blog using R markdown
 Authors@R: c(
     person("Dan", "Negrey", email = "dnegrey@gmail.com", role = c("aut", "cre"))

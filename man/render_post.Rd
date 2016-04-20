@@ -16,7 +16,7 @@ The post HTML file is created.
 \code{render_post} renders a post to HTML
 }
 \examples{
-new_post("Hello, world!", Sys.Date(), "hello-world")
+new_post("Hello, world!", "hello-world")
 render_post(post_dir(Sys.Date(), "hello-world"))
 }
 \seealso{

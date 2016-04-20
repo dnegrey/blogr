@@ -4,14 +4,14 @@
 \alias{new_post}
 \title{Create a new post}
 \usage{
-new_post(title, date, name, blogdir = ".")
+new_post(title, name, date = Sys.Date(), blogdir = ".")
 }
 \arguments{
 \item{title}{the title of the post}
 
-\item{date}{the date of the post}
-
 \item{name}{the name of the post}
+
+\item{date}{the date of the post}
 
 \item{blogdir}{path to the base directory of the blog}
 }
@@ -23,7 +23,7 @@ A new post is created in the \code{posts} directory using the
 \code{new_post} creates a new post
 }
 \examples{
-new_post("Hello, world!", Sys.Date(), "hello-world")
+new_post("Hello, world!", "hello-world")
 }
 \seealso{
 \code{\link{tag_post}, \link{render_post}, \link{remove_post}}
