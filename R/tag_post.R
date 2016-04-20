@@ -7,7 +7,7 @@
 #' does not already exist, and populated with the items in \code{tags}.
 #' @seealso \code{\link{new_post}, \link{render_post}, \link{remove_post}}
 #' @examples 
-#' new_post("Hello, world!", Sys.Date(), "hello-world")
+#' new_post("Hello, world!", "hello-world")
 #' tag_post(post_dir(Sys.Date(), "hello-world"), c("greetings", "salutations"))
 #' @export 
 tag_post <- function(post, tags, append = TRUE) {

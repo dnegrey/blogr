@@ -16,7 +16,7 @@ The directory \code{post} is removed if it exists.
 \code{remove_post} removes a post
 }
 \examples{
-new_post("Hello, world!", Sys.Date(), "hello-world")
+new_post("Hello, world!", "hello-world")
 remove_post(post_dir(Sys.Date(), "hello-world"))
 }
 \seealso{

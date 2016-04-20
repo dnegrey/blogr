@@ -17,7 +17,7 @@ A named list containing information about \code{post}
 returns it in a named list
 }
 \examples{
-new_post("Hello, world!", Sys.Date(), "hello-world")
+new_post("Hello, world!", "hello-world")
 tag_post(post_dir(Sys.Date(), "hello-world"), c("greetings", "salutations"))
 post_info(post_dir(Sys.Date(), "hello-world"))
 }
