@@ -2,4 +2,4 @@
 
 R package for creating a blog using R markdown
 
-*version 0.0.0.9002*
+*version 1.0.0*

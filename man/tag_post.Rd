@@ -21,7 +21,7 @@ does not already exist, and populated with the items in \code{tags}.
 \code{tag_post} tags a post
 }
 \examples{
-new_post("Hello, world!", Sys.Date(), "hello-world")
+new_post("Hello, world!", "hello-world")
 tag_post(post_dir(Sys.Date(), "hello-world"), c("greetings", "salutations"))
 }
 \seealso{
