@@ -2,6 +2,7 @@
 
 export(ensure_posts)
 export(ensure_shell)
+export(get_post_dirs)
 export(new_post)
 export(post_dir)
 export(remove_post)
