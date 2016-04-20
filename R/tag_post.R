@@ -16,13 +16,10 @@ tag_post <- function(post, tags, append = TRUE) {
     } else {
         ensure_tags(post)
         tagFile <- paste(post, "tags", sep = "/")
-        if (!append) {
-            write(tags, tagFile)
-        } else {
-            x <- readLines(tagFile)
-            x <- unique(c(x, tags))
-            x <- x[order(x)]
-            write(x, tagFile)
-        }
+        write(tags, tagFile, append = append)
+        x <- readLines(tagFile)
+        x <- unique(x)
+        x <- x[order(x)]
+        write(x, tagFile)
     }
 }
