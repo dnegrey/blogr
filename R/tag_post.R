@@ -14,8 +14,9 @@ tag_post <- function(post, tags, append = TRUE) {
     if (!dir.exists(post)) {
         stop("the post [", post, "] does not exist")
     } else {
+        ensure_tags(post)
         tagFile <- paste(post, "tags", sep = "/")
-        if (!file.exists(tagFile) | !append) {
+        if (!append) {
             write(tags, tagFile)
         } else {
             x <- readLines(tagFile)

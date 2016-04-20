@@ -17,15 +17,16 @@ new_post <- function(title, date, name, blogdir = ".") {
     } else {
         ensure_posts(blogdir)
         dir.create(pd)
+        content <- c(
+            paste("#", title),
+            "",
+            paste0("*", format(date, "%B %d, %Y"), "*")
+        )
+        write(content, paste(pd, "content.Rmd", sep = "/"))
+        ensure_shell(blogdir)
+        shell_in <- paste(blogdir, "shell.Rmd", sep = "/")
+        shell_out <- paste(pd, "index.Rmd", sep = "/")
+        file.copy(shell_in, shell_out)
+        ensure_tags(pd)
     }
-    content <- c(
-        paste("#", title),
-        "",
-        paste0("*", format(date, "%B %d, %Y"), "*")
-    )
-    write(content, paste(pd, "content.Rmd", sep = "/"))
-    ensure_shell(blogdir)
-    shell_in <- paste(blogdir, "shell.Rmd", sep = "/")
-    shell_out <- paste(pd, "index.Rmd", sep = "/")
-    file.copy(shell_in, shell_out)
 }

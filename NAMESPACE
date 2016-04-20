@@ -2,6 +2,7 @@
 
 export(ensure_posts)
 export(ensure_shell)
+export(ensure_tags)
 export(get_post_dirs)
 export(new_post)
 export(post_dir)
