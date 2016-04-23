@@ -36,21 +36,26 @@ post_search <- function(blogdir = ".", linkdir = "/blog") {
         x$link,
         '">',
         x$title,
-        "</a>"
-    )
-    x$Tags <- paste0(
+        "</a>",
+        "<p>",
+        "<em>",
+        format(x$date, "%B %d, %Y"),
+        "</em>",
+        "</p>",
+        "<p>",
         "<b>",
-        x$tags,
-        "</b>"
+        toupper(x$tags),
+        "</b>",
+        "</p>"
     )
-    x$Posted <- x$date
-    x <- x[c("Title", "Tags", "Posted")]
+    x <- x[c("Title")]
     x <- datatable(
         x,
         rownames = FALSE,
+        colnames = "Recent Posts",
         escape = FALSE,
         options = list(
-            columnDefs = list(list(className = 'dt-center', targets = c(1, 2)))
+            ordering = FALSE
         )
     )
     return(x)
