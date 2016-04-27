@@ -1,6 +1,6 @@
 Package: blogr
 Type: Package
-Version: 1.0.0
+Version: 1.1.0
 Title: Lightweight blog framework using R markdown
 Description: Basic utilities for creating a blog using R markdown
 Authors@R: c(
