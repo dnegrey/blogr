@@ -4,12 +4,17 @@
 \alias{post_search}
 \title{Generate a search table for blog posts}
 \usage{
-post_search(blogdir = ".", linkdir = "/blog")
+post_search(blogdir = ".", linkdir = "/blog", tagBackground = "#3399F3",
+  tagColor = "#FFFFFF")
 }
 \arguments{
 \item{blogdir}{path to the base directory of the blog}
 
 \item{linkdir}{relative path to the blog directory to use in post hyperlinks}
+
+\item{tagBackground}{background color to use for tags}
+
+\item{tagColor}{font color to use for tags}
 }
 \value{
 A \code{\link{datatable}} containing post information
@@ -22,7 +27,8 @@ lapply(seq.Date(Sys.Date() - 4, Sys.Date(), 1),
        new_post,
        title = "Lorem Ipsum", 
        name = "lorem-ipsum")
-tag_post(get_post_dirs()[1], c("hello", "world"))
+tag_post(get_post_dirs()[3], c("hello", "world"))
+tag_post(get_post_dirs()[1], c("don't", "panic"))
 post_search()
 }
 \seealso{
