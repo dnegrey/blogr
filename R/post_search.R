@@ -17,10 +17,18 @@ post_search <- function(blogdir = ".", linkdir = "/blog") {
     x <- lapply(get_post_dirs(blogdir), post_info)
     x <- lapply(x, function(y){
         z <- y
+        ulstart <- "<ul class=\"tags\">"
+        ulend <- "</ul>"
         if (length(z$tags) == 0) {
-            z$tags <- ""
+            z$tags <- paste0(ulstart, ulend)
         } else {
-            z$tags <- paste(z$tags, collapse = ", ")
+            z$tags <- toupper(z$tags)
+            z$tags <- paste0(
+                ulstart,
+                paste0("<li>", z$tags, "</li>", collapse = ""),
+                ulend,
+                collapse = ""
+            )
         }
         return(z)
     })
@@ -43,9 +51,7 @@ post_search <- function(blogdir = ".", linkdir = "/blog") {
         "</em>",
         "</p>",
         "<p>",
-        "<b>",
-        toupper(x$tags),
-        "</b>",
+        x$tags,
         "</p>"
     )
     x <- x[c("Title")]
