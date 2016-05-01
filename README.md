@@ -2,11 +2,11 @@
 
 Lightweight blog framework using R markdown
 
-*version 1.1.1*
+*version 1.1.2*
 
 ## Release Notes
 
-### 1.1.1
+### 1.1.1 - 1.1.2
 
 * Replaced unicode circle with styled div in `post_search()`
 
