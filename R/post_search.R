@@ -28,13 +28,14 @@ post_search <- function(blogdir = ".",
         listart <- paste0(
             "<li ",
             "style=\"",
-            "float: left;",
+            "list-style-type: none;",
+            "display: inline-block;",
             "height: 24px;",
-            "line-height: 24px;",
+            "line-height: 25px;",
             "font-size: 12px;",
             "margin-right: 10px;",
-            "padding: 0 10px 0 12px;",
-            paste0("background: ", tagBackground, ";"),
+            "padding: 0 12px 0 12px;",
+            paste0("background-color: ", tagBackground, ";"),
             paste0("color: ", tagColor, ";"),
             "-moz-border-radius-bottomleft: 16px;",
             "-webkit-border-bottom-left-radius: 16px;",
@@ -44,15 +45,28 @@ post_search <- function(blogdir = ".",
             "border-top-left-radius: 16px;",
             "\">"
         )
+        divstart <- paste0(
+            "<div ",
+            "style=\"",
+            "float: left;",
+            "margin: 8px 4px 8px 0px;",
+            "height: 8px;",
+            "width: 8px;",
+            "border-radius: 8px;",
+            "-moz-border-radius: 8px;",
+            "-webkit-border-radius: 8px;",
+            paste0("background-color: ", tagColor, ";"),
+            "\">"
+        )
+        divend <- "</div>"
         liend <- "</li>"
         if (length(z$tags) == 0) {
             z$tags <- paste0(ulstart, ulend)
         } else {
             z$tags <- toupper(z$tags)
-            z$tags <- paste("&#9899&#160", z$tags)
             z$tags <- paste0(
                 ulstart,
-                paste0(listart, z$tags, liend, collapse = ""),
+                paste0(listart,divstart, divend, z$tags, liend, collapse = ""),
                 ulend,
                 collapse = ""
             )
