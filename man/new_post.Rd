@@ -4,7 +4,7 @@
 \alias{new_post}
 \title{Create a new post}
 \usage{
-new_post(title, name, date = Sys.Date(), blogdir = ".")
+new_post(title, name, date = Sys.Date(), blogdir = ".", ...)
 }
 \arguments{
 \item{title}{the title of the post}
@@ -14,6 +14,8 @@ new_post(title, name, date = Sys.Date(), blogdir = ".")
 \item{date}{the date of the post}
 
 \item{blogdir}{path to the base directory of the blog}
+
+\item{...}{ordered strings for substitution into \code{shell.Rmd}}
 }
 \value{
 A new post is created in the \code{posts} directory using the 
