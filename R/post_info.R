@@ -20,6 +20,11 @@ post_info <- function(post) {
         contentFile <- paste(post, "content.Rmd", sep = "/")
         title <- readLines(contentFile)[1]
         title <- substr(title, 3, nchar(title))
+        z <- unlist(gregexpr("\\{", title))
+        z <- z[length(z)]
+        z <- ifelse(z == -1, nchar(title) + 1, z)
+        title <- substr(title, 1, z - 1)
+        title <- trimws(title)
         tagFile <- paste(post, "tags", sep = "/")
         tags <- readLines(tagFile)
         x <- list(date = date,
