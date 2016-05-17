@@ -80,16 +80,16 @@ post_search <- function(blogdir = ".",
                    paste0(linkdir, "/posts/"),
                    x$path)
     x$Title <- paste0(
-        "<a href=",
+        "<b><a href=",
         '"',
         x$link,
         '">',
         x$title,
-        "</a>",
+        "</a></b>",
         "<p>",
-        "<em>",
+        "<b>",
         format(x$date, "%B %d, %Y"),
-        "</em>",
+        "</b>",
         "</p>",
         x$tags
     )

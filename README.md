@@ -2,11 +2,11 @@
 
 Lightweight blog framework using R markdown
 
-*version 1.2.3*
+*version 1.2.4*
 
 ## Release Notes
 
-### 1.2.0 - 1.2.3
+### 1.2.0 - 1.2.4
 
 * Added ... as parm for `new_post()`
 * Use for string substitutions in `shell.Rmd`
